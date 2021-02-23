@@ -1,0 +1,31 @@
+{
+  "name": "screenlineqa",
+  "version": "1.0.0",
+  "description": "Automation tests for screen QA",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbyonivo/screenlineqa.git"
+  },
+  "author": "Screenline Developers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gbyonivo/screenlineqa/issues"
+  },
+  "homepage": "https://github.com/gbyonivo/screenlineqa#readme",
+  "devDependencies": {
+    "cypress": "^6.4.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "date-fns": "^2.16.1"
+  }
+}
