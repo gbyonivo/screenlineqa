@@ -1,4 +1,5 @@
 import { searchAndSelect } from './search_and_select';
+import { pickDate } from './date_picker';
 
 const locators = {
   firstNameInput: '#firstName',
@@ -29,6 +30,7 @@ const locators = {
   departmentError: '#classError',
   nationalitySelect: '#nationality',
   nationalityError: '#nationalityError',
+  dobBaseId: 'dob',
   doneButton: 'button[name=studentsRequestBtn]',
 };
 
@@ -80,6 +82,9 @@ const fillForm = async (student) => {
   }
   if (student.subjectsIds) {
     await searchAndSelect('subjects', student.subjectsIds);
+  }
+  if (student.dob) {
+    await pickDate(student.dob, locators.dobBaseId);
   }
 
   await cy.get(locators.doneButton).click();

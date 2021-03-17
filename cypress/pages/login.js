@@ -13,13 +13,14 @@ const locators = {
 
 const login = async ({ regNumber, password = USER_PASSWORD, school }) => {
   await cy.visit(LOGIN_PAGE_URL);
-  await cy.wait(2000);
+  await cy.wait(1000);
   await cy.get(locators.regNumberInput).clear().type(regNumber);
   await cy.get(locators.passwordInput).clear().type(password);
   await cy.get(locators.loginButton).click();
   if (school) {
     await changeSchool({ school, afterLogin: true });
   }
+  await cy.wait(1000);
 };
 
 export {

@@ -14,6 +14,7 @@ const validTertiaryStudent = {
   countryOfResidence: 'GH',
   stateOfResidence: 'Outside Nigeria',
   address: 'This is an address',
+  dob: '1992-05-11',
 };
 
 const validPrimaryStudent = {
@@ -24,6 +25,7 @@ const validPrimaryStudent = {
   previousSchool: 'Height School',
   countryOfResidence: 'GH',
   stateOfResidence: 'Outside Nigeria',
+  dob: '2010-11-07',
 };
 
 export {

@@ -1,7 +1,9 @@
-const pickDate = (year, month, day, baseId) => {
-  cy.get(`datePicker-${baseId} input[name=year]`).clear().type(year);
-  cy.get(`datePicker-${baseId} input[name=month]`).clear().type(month);
-  cy.get(`datePicker-${baseId} input[name=year]`).clear().type(day);
+const pickDate = async (date, baseId) => {
+  if (!date || !baseId) return;
+  const [year, month, day] = date.split('-');
+  await cy.get(`#datePicker-${baseId} input[name=year]`).clear().type(year);
+  await cy.get(`#datePicker-${baseId} input[name=month]`).clear().type(month);
+  await cy.get(`#datePicker-${baseId} input[name=day]`).clear().type(day);
 };
 
 const pickTime = () => {};
